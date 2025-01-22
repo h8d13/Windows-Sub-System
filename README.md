@@ -1,6 +1,6 @@
 # Windows Sub System (WSS) 
 
-Prereqs: Qemu, KVM 
+Prereqs: Qemu, KVM, perms, windows ISO file
 
 1. Create VM disk
       
