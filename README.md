@@ -1,6 +1,6 @@
 # turbo-octo-invention
 
-- create automation scripts for launch
+Prereqs: Qemu, KVM 
 
 1. Create VM disk
       
