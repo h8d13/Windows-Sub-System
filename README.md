@@ -30,7 +30,15 @@ Because I know someone is going to try launch RDR2:
 You might need to pass the USB:
 
         "-device", f"usb-host,hostbus={usb_device[0]},hostaddr={usb_device[1]}", 
-        "-soundhw", "ac97",  # Enable AC97 sound hardware for the VM (common audio device)
+        "-soundhw", "ac97",  
         "-audio-driver", "alsa",
 
-        
+To share a drive with the guest machine:
+sudo apt-get install samba
+
+        " qemu-system-x86_64 -enable-kvm -m 6144 -cpu host -smp 8 -hda myvm.qcow2 -boot c -net nic -net user,smb=/home/hadepop/Desktop/vm/shared"
+
+Then naviguate in file explorer to \\10.0.2.4\qemu 
+
+![image](https://github.com/user-attachments/assets/c256c442-0cf6-48d6-b8c7-562038389b09)
+
