@@ -4,18 +4,21 @@
 
 1. Boot
     - Create VM disk
+qemu-img create -f qcow2 myvm.qcow2 60G
+
     - Launch installation media with settings
+qemu-system-x86_64   -enable-kvm   -m 8096   -cpu host   -smp 4   -hda myvm.qcow2   -cdrom ~/Downloads/tiny.iso   -boot d
+
 2. Start
+qemu-system-x86_64   -enable-kvm   -m 6144   -cpu host   -smp 4   -hda myvm.qcow2   -boot c
 
 3. Have fun!
 
 ----
 
-qemu-img create -f qcow2 myvm.qcow2 60G
 
-qemu-system-x86_64   -enable-kvm   -m 8096   -cpu host   -smp 4   -hda myvm.qcow2   -cdrom ~/Downloads/tiny.iso   -boot d
 
-qemu-system-x86_64   -enable-kvm   -m 6144   -cpu host   -smp 4   -hda myvm.qcow2   -boot c
+
 
 I tested up to 8 and 10 vCPUs and my laptop barely broke the 50% RAM point using the Tiny11 install
 Also does eat up quite a bit of ram but that was expected...
