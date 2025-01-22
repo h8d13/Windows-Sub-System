@@ -2,15 +2,17 @@
 
 - create automation scripts for launch
 
-1. Boot
-    - Create VM disk
-qemu-img create -f qcow2 myvm.qcow2 60G
+1. Create VM disk
+      
+```qemu-img create -f qcow2 myvm.qcow2 60G```
 
-    - Launch installation media with settings
-qemu-system-x86_64   -enable-kvm   -m 8096   -cpu host   -smp 4   -hda myvm.qcow2   -cdrom ~/Downloads/tiny.iso   -boot d
+2. Boot
+      
+```qemu-system-x86_64   -enable-kvm   -m 8096   -cpu host   -smp 4   -hda myvm.qcow2   -cdrom ~/Downloads/tiny.iso   -boot d``` 
 
-2. Start
-qemu-system-x86_64   -enable-kvm   -m 6144   -cpu host   -smp 4   -hda myvm.qcow2   -boot c
+3. Start
+
+```qemu-system-x86_64   -enable-kvm   -m 6144   -cpu host   -smp 4   -hda myvm.qcow2   -boot c``` 
 
 3. Have fun!
 
