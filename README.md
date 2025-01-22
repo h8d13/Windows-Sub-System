@@ -30,5 +30,7 @@ Because I know someone is going to try launch RDR2:
 You might need to pass the USB:
 
         "-device", f"usb-host,hostbus={usb_device[0]},hostaddr={usb_device[1]}", 
+        "-soundhw", "ac97",  # Enable AC97 sound hardware for the VM (common audio device)
+        "-audio-driver", "alsa",
 
         
