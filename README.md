@@ -42,3 +42,21 @@ Then naviguate in file explorer to \\10.0.2.4\qemu
 
 ![image](https://github.com/user-attachments/assets/c256c442-0cf6-48d6-b8c7-562038389b09)
 
+
+qemu-system-x86_64 -enable-kvm -m 6144 -cpu host -smp 8 -hda myvm.qcow2 -boot c -net nic -net user,smb=/home/hadepop/Desktop/vm/shared -device nec-usb-xhci,id=xhci -device usb-tablet
+
+
+import sys
+
+print(f"System python: {sys.executable}")
+
+#x = python -m venv venv
+#y = python venv\Scripts\activate
+
+## Use absolute paths as they are more likely not to change. 
+import subprocess
+subprocess.run(['C:\\Program Files\\Mozilla Firefox\\firefox.exe'])
+
+
+
+
