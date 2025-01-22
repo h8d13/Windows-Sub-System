@@ -14,7 +14,7 @@
 
 ```qemu-system-x86_64   -enable-kvm   -m 6144   -cpu host   -smp 4   -hda myvm.qcow2   -boot c``` 
 
-3. Have fun!
+4. Have fun!
 
 ----
 
