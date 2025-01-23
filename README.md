@@ -76,11 +76,21 @@ import time
 #time.sleep(1)
 #pag.press('enter')
 
-#If you see this you're a G : (.venv) PS Microsoft.PowerShell.Core\FileSystem::\\10.0.2.4\qemu> 
+```
 
-``` 
+If the whole set)up works it's very cool! 
 
-## For further clean-up:
+You a truly on shared system between the Windows and Linux:
+If you see this you're a G : (.venv) PS Microsoft.PowerShell.Core\FileSystem::\\10.0.2.4\qemu> 
+
+Then run the script again and get output:
+```
+(.venv) PS Microsoft.PowerShell.Core\FileSystem::\\10.0.2.4\qemu> & //10.0.2.4/qemu/.venv/Scripts/python.exe //10.0.2.4/qemu/hello.py       
+H
+Exec: \\10.0.2.4\qemu\.venv\Scripts\python.exe
+```  
+
+## For further Windows clean-up:
 
 Settings > Privacy & Security > Search Permissions
 
