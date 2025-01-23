@@ -57,7 +57,7 @@ print(f'{y}')
 
 import sys
 
-print(f"System python: {sys.executable}")
+print(f"Exec: {sys.executable}")
 
 ## Use absolute paths as they are more likely not to change. 
 import subprocess
@@ -66,8 +66,16 @@ import subprocess
 ### Run powershell scripts directly
 subprocess.run(['powershell.exe', 'Start-Process firefox'])
 
-``` 
+## Simplest Hello World Search
 
+import time
+import pyautogui as pag
+
+time.sleep(2)  # Wait for Firefox to open
+pag.write('Hello World')
+pag.press('enter')
+
+``` 
 
 ## For further clean-up:
 
