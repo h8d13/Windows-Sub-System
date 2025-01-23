@@ -36,9 +36,10 @@ You might need to pass the USB:
         "-audio-driver", "alsa",
 
 To share a drive with the guest machine:
-sudo apt-get install samba
 
-        " qemu-system-x86_64 -enable-kvm -m 6144 -cpu host -smp 8 -hda myvm.qcow2 -boot c -net nic -net user,smb=/home/hadepop/Desktop/vm/shared"
+      sudo apt-get install samba
+
+```qemu-system-x86_64 -enable-kvm -m 6144 -cpu host -smp 8 -hda myvm.qcow2 -boot c -net nic -net user,smb=/home/hadepop/Desktop/vm/shared``` 
 
 Then naviguate in file explorer to: ```  \\10.0.2.4\qemu ``` 
 
