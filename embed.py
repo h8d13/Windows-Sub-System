@@ -1,8 +1,9 @@
 import sys
 import subprocess
+import time
 from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout
 from PyQt6.QtGui import QWindow
-from PyQt6.QtCore import QTimer, Qt
+from PyQt6.QtCore import Qt, QProcess
 
 class VMWindow(QMainWindow):
     def __init__(self):
@@ -16,15 +17,15 @@ class VMWindow(QMainWindow):
         self.layout = QVBoxLayout(self.central_widget)
         self.layout.setContentsMargins(0, 0, 0, 0)
         
-        # QEMU process handle
+        # QEMU process and window handles
         self.qemu_process = None
         self.vm_window = None
         
-        # Start QEMU and setup timer to check for window
+        # Start QEMU with window embedding
         self.start_qemu()
-        self.timer = QTimer()
-        self.timer.timeout.connect(self.embed_vm_window)
-        self.timer.start(500)  # Check every 500ms
+        QApplication.instance().processEvents()
+        time.sleep(1)  # Give QEMU time to initialize
+        self.embed_vm_window()
 
     def start_qemu(self):
         qemu_command = [
@@ -37,47 +38,47 @@ class VMWindow(QMainWindow):
             "-boot", "c",
             "-net", "nic",
             "-net", "user,smb=/home/hadepop/Desktop/vm/shared",
-            "-display", "x11,window_title=QEMU-Embedded-VM"
+            "-display", "gtk,window-title=QEMU-Embedded-VM",
+            "-qmp", "tcp:localhost:4444,server,nowait"
         ]
         
         try:
-            self.qemu_process = subprocess.Popen(qemu_command)
-        except FileNotFoundError:
-            print("Error: QEMU executable not found!")
+            self.qemu_process = QProcess()
+            self.qemu_process.start(qemu_command[0], qemu_command[1:])
+        except Exception as e:
+            print(f"Error starting QEMU: {e}")
             sys.exit(1)
 
     def embed_vm_window(self):
         try:
-            # Get window ID using xwininfo
+            # Find window ID using xdotool
             result = subprocess.run(
-                ["xwininfo", "-name", "QEMU-Embedded-VM", "-int"],
-                capture_output=True, text=True, timeout=2
+                ["xdotool", "search", "--name", "QEMU-Embedded-VM"],
+                capture_output=True, text=True, timeout=5
             )
             
-            # Parse window ID from output
-            for line in result.stdout.split('\n'):
-                if "Window id:" in line:
-                    win_id = line.split()[-1]
-                    win_id = int(win_id, 16)  # Convert hex to decimal
-                    self._embed_window(win_id)
-                    self.timer.stop()
+            if result.returncode == 0:
+                win_id = result.stdout.strip()
+                if win_id:
+                    self._embed_window(int(win_id))
                     return
-                    
-        except (subprocess.TimeoutExpired, subprocess.CalledProcessError):
-            pass  # Window not ready yet
+                
+            print("Failed to find QEMU window. Trying alternative method...")
+            self._embed_window(self.qemu_process.processId())
+
+        except Exception as e:
+            print(f"Window embedding failed: {e}")
 
     def _embed_window(self, win_id):
-        # Create QWindow from X11 window ID
-        foreign_window = QWindow.fromWinId(win_id)
-        
-        # Create container widget
-        container = self.central_widget.createWindowContainer(foreign_window)
-        container.setFocusPolicy(Qt.FocusPolicy.StrongFocus)
-        self.layout.addWidget(container)
-        
-        # Ensure proper resizing
-        foreign_window.resize(self.size())
-        self.vm_window = foreign_window
+        try:
+            foreign_window = QWindow.fromWinId(win_id)
+            container = self.central_widget.createWindowContainer(foreign_window)
+            container.setFocusPolicy(Qt.FocusPolicy.StrongFocus)
+            self.layout.addWidget(container)
+            foreign_window.resize(self.size())
+            self.vm_window = foreign_window
+        except Exception as e:
+            print(f"Window embedding error: {e}")
 
     def resizeEvent(self, event):
         if self.vm_window:
@@ -85,10 +86,9 @@ class VMWindow(QMainWindow):
         super().resizeEvent(event)
 
     def closeEvent(self, event):
-        # Cleanup QEMU process on window close
-        if self.qemu_process and self.qemu_process.poll() is None:
+        if self.qemu_process and self.qemu_process.state() == QProcess.ProcessState.Running:
             self.qemu_process.terminate()
-            self.qemu_process.wait()
+            self.qemu_process.waitForFinished(5000)
         super().closeEvent(event)
 
 if __name__ == "__main__":
