@@ -102,6 +102,29 @@ This opens a graphical interface with every single command possible...
 Settings > Privacy & Security > Search Permissions
 Tick off everything but local search. 
 
+## Clean directory:
+----
+
+```
+📦 VM
+├─ myvm.qcow2 # Reserved space for VM
+├─ tiny.iso # Bootable W11 ISO
+└─ shared
+   ├─ .venv
+   └─ scripts
+```
+
+**Notes:**
+
+Windows will reboot 3 times during install make sure to not close the VM and lit it do it's thing until the very end. It will also consume unhealthy amounts of RAM/CPU during install. All normal. 
+
+Make sure to change boot order to not install twice once you're in. 
+
+Create a desktop shortcut to your shared folder is practical! You can also directly open it in VSCode. 
+
+
+
+
 
 
 
