@@ -97,6 +97,9 @@ Exec: \\10.0.2.4\qemu\.venv\Scripts\python.exe
 If you got here congrats :)
 
 
+Now if you want to learn about Powershell commands the easiest way is simply to run a CMD and enter ISE.
+This opens a graphical interface with every single command possible...
+
 ## For further Windows clean-up:
 
 Settings > Privacy & Security > Search Permissions
