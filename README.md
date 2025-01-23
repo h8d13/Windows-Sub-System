@@ -60,3 +60,6 @@ subprocess.run(['C:\\Program Files\\Mozilla Firefox\\firefox.exe'])
 ``` 
 
 
+For further clean-up:
+
+
