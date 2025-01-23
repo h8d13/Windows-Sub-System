@@ -64,16 +64,22 @@ import subprocess
 #subprocess.run(['C:\\Program Files\\Mozilla Firefox\\firefox.exe'])
 
 ### Run powershell scripts directly
-subprocess.run(['powershell.exe', 'Start-Process firefox'])
+#subprocess.run(['powershell.exe', 'Start-Process firefox'])
+
+### This is where you have to toggle of all the Windows Garbage
+subprocess.run(['powershell.exe', 'Start-Process ms-settings:privacy-search'])
 
 ## Simplest Hello World Search
 
 import time
-import pyautogui as pag
+#import pyautogui as pag
 
-time.sleep(2)  # Wait for Firefox to open
-pag.write('Hello World')
-pag.press('enter')
+#time.sleep(2)  # Wait for Firefox to open
+#pag.write('Hello World')
+#time.sleep(1)
+#pag.press('enter')
+
+#If you see this you're a G : (.venv) PS Microsoft.PowerShell.Core\FileSystem::\\10.0.2.4\qemu> 
 
 ``` 
 
