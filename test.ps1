@@ -25,10 +25,8 @@ function Start-CustomProgram {
     }
 }
 
-# Example usage:
 $sysInfo = Get-SystemInfo
 Write-Host "System Information:"
 $sysInfo | Format-Table
 
-# Similar to your Firefox example, but with error handling
 Start-CustomProgram "C:\Program Files\Mozilla Firefox\firefox.exe"
