@@ -99,6 +99,8 @@ If you got here congrats :)
 If you didn't you might have to set ``` Set-ExecutionPolicy RemoteSigned``` 
 You also have to launch this as admin. Yes the good things behind a single toggle. 
 
+![image](https://github.com/user-attachments/assets/68dd3dfc-7f01-4f79-98e9-a34f3e26cc36)
+
 I don't know how safe any of this is in practice but since this is a VM set-up with a pirated iso... Well you get the idea. 
 
 Now if you want to learn about Powershell commands the easiest way is simply to run a CMD and enter ISE.
@@ -107,10 +109,7 @@ This opens a graphical interface with every single command possible...
 ## For further Windows clean-up:
 
 Settings > Privacy & Security > Search Permissions
-
 Tick off everything but local search. 
-
-
 
 
 
