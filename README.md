@@ -48,16 +48,24 @@ This way you don't even need clipboard share.
 ![image](https://github.com/user-attachments/assets/c256c442-0cf6-48d6-b8c7-562038389b09)
 
 ```  
+import random
+
+x = "Hello from Python in Windows on Linux"
+#print(f'{x}')
+y = random.choice(x)
+print(f'{y}')
+
 import sys
 
 print(f"System python: {sys.executable}")
 
-#x = python -m venv venv
-#y = python venv\Scripts\activate
-
 ## Use absolute paths as they are more likely not to change. 
 import subprocess
-subprocess.run(['C:\\Program Files\\Mozilla Firefox\\firefox.exe'])
+#subprocess.run(['C:\\Program Files\\Mozilla Firefox\\firefox.exe'])
+
+### Run powershell scripts directly
+subprocess.run(['powershell.exe', 'Start-Process firefox'])
+
 ``` 
 
 
