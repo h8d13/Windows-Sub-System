@@ -66,9 +66,6 @@ import subprocess
 ### Run powershell scripts directly
 #subprocess.run(['powershell.exe', 'Start-Process firefox'])
 
-### This is where you have to toggle of all the Windows Garbage
-subprocess.run(['powershell.exe', 'Start-Process ms-settings:privacy-search'])
-
 ## Simplest Hello World Search
 
 import time
