@@ -79,7 +79,11 @@ pag.press('enter')
 
 ## For further clean-up:
 
-Right in search menu, find search settings remove all the suggestions appart from local.
+Settings > Privacy & Security > Search Permissions
+
+Tick off everything but local search. 
+
+
 
 
 
