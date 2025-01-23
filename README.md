@@ -96,6 +96,10 @@ Exec: \\10.0.2.4\qemu\.venv\Scripts\python.exe
 
 If you got here congrats :)
 
+If you didn't you might have to set ``` Set-ExecutionPolicy RemoteSigned``` 
+You also have to launch this as admin. Yes the good things behind a single toggle. 
+
+I don't know how safe any of this is in practice but since this is a VM set-up with a pirated iso... Well you get the idea. 
 
 Now if you want to learn about Powershell commands the easiest way is simply to run a CMD and enter ISE.
 This opens a graphical interface with every single command possible...
