@@ -81,7 +81,11 @@ import time
 If the whole set)up works it's very cool! 
 
 You a truly on shared system between the Windows and Linux:
+``` 
 If you see this you're a G : (.venv) PS Microsoft.PowerShell.Core\FileSystem::\\10.0.2.4\qemu> 
+```
+
+On the guest system you will have to enable PS scripts in settings (Settings > Then type in the search bar Powershell)
 
 Then run the script again and get output:
 ```
@@ -89,6 +93,9 @@ Then run the script again and get output:
 H
 Exec: \\10.0.2.4\qemu\.venv\Scripts\python.exe
 ```  
+
+If you got here congrats :)
+
 
 ## For further Windows clean-up:
 
