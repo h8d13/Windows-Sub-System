@@ -25,16 +25,6 @@ Also does eat up quite a bit of ram but that was expected... On install it will 
 
 ![Screenshot from 2025-01-22 03-54-26](https://github.com/user-attachments/assets/54353e1a-fde2-4465-abe5-6ec55060734e)
 
-Windows Sub System anyone? 
-
-Because I know someone is going to try launch RDR2:
-
-You might need to pass the USB:
-
-        "-device", f"usb-host,hostbus={usb_device[0]},hostaddr={usb_device[1]}", 
-        "-soundhw", "ac97",  
-        "-audio-driver", "alsa",
-
 To share a drive with the guest machine:
 
       sudo apt-get install samba
@@ -78,9 +68,10 @@ import time
 
 ```
 
-If the whole set)up works it's very cool! 
+If the whole set-up works it's very cool! 
 
 You a truly on shared system between the Windows and Linux:
+
 ``` 
 If you see this you're a G : (.venv) PS Microsoft.PowerShell.Core\FileSystem::\\10.0.2.4\qemu> 
 ```
