@@ -19,7 +19,7 @@ Prereqs: Qemu, KVM, perms, windows ISO file
 ----
 
 I tested up to 8 and 10 vCPUs and my laptop barely broke the 40% CPU/ 50% RAM point using the Tiny11 install
-Also does eat up quite a bit of ram but that was expected...
+Also does eat up quite a bit of ram but that was expected... On install it will break the 90%.
 
 ![Screenshot from 2025-01-22 03-54-26](https://github.com/user-attachments/assets/54353e1a-fde2-4465-abe5-6ec55060734e)
 
