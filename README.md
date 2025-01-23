@@ -60,6 +60,11 @@ subprocess.run(['C:\\Program Files\\Mozilla Firefox\\firefox.exe'])
 ``` 
 
 
-For further clean-up:
+## For further clean-up:
+
+Right in search menu, find search settings remove all the suggestions appart from local.
+
+
+
 
 
