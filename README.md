@@ -15,6 +15,8 @@ Prereqs: Qemu, KVM, perms, windows ISO file
 ```qemu-system-x86_64   -enable-kvm   -m 6144   -cpu host   -smp 4   -hda myvm.qcow2   -boot c``` 
 
 4. Have fun! If you ever break something you can always re-install using the boot d (floppy).
+I tried getting WSL running and that wasnt a good idea.
+
 
 ----
 
