@@ -102,6 +102,9 @@ This opens a graphical interface with every single command possible...
 Settings > Privacy & Security > Search Permissions
 Tick off everything but local search. 
 
+Go to Microsoft Store > Search WinToys
+Browse wintoys tweaks 
+
 ## Clean directory:
 ----
 
