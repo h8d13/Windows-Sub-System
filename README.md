@@ -1,5 +1,8 @@
 # Windows Sub System (WSS) 
 
+You're a secret neckbeard and want to seem normal to your colleagues? Reddit is your main source of news? 
+Keep reading!
+
 Prereqs: Qemu, KVM, perms, windows ISO file
 
 1. Create VM disk
