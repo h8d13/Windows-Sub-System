@@ -114,8 +114,10 @@ Yes the good things behind a single toggle or several... And a few downloads.
 
 I don't know how safe any of this is in practice but since this is a VM set-up with a barebones iso... Well you get the idea. 
 
-Now if you want to learn about Powershell commands the easiest way is simply to run a CMD and enter ISE.
+Now if you want to learn about Powershell commands the easiest way is simply to run a powershell and enter ISE.
 This opens a graphical interface with every single command possible...
+
+Then click the little help icons that will link to Microsoft website for usage information. 
 
 ## For further Windows clean-up:
 
