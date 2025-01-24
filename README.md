@@ -30,11 +30,13 @@ Also does eat up quite a bit of ram but that was expected... On install it will 
 
 ![Screenshot from 2025-01-22 03-54-26](https://github.com/user-attachments/assets/54353e1a-fde2-4465-abe5-6ec55060734e)
 
-1. Python executable
+**1. Python executable**
+
 I recommend to not use the Windows Store as that will install it in a weird path that is not recognized.
 Instead go to python.org and tick all the Admin required options when running the installer.
 
-2. Python extensions on VSCode
+**2. Python extensions on VSCode**
+
 Get them so that your venvs activate by themselves.
 
 
