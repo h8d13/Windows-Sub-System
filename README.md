@@ -120,6 +120,10 @@ Tick off everything but local search.
 Go to Microsoft Store > Search WinToys
 Browse wintoys tweaks 
 
+Finally I hate the shortcuts on Windows: You can remap them, of course behind a download:
+Go to Microsoft Store > Search PowerToys
+Browse keyboard enable then remap
+
 ## Clean directory:
 ----
 
