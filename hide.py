@@ -1,4 +1,6 @@
-# Pip install keyboard pywin32 (CTRL + H to hide) 
+# Pip install keyboard pywin32 
+# (CTRL + H to hide) 
+## Uses a combination of PowerShell scripting + PyWin32 to perform actions on Windows
 
 import keyboard
 import subprocess
