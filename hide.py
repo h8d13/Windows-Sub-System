@@ -21,8 +21,9 @@ is_hidden = False
 def toggle_windows():
    global hidden_windows, is_hidden
    if not is_hidden:
-       subprocess.run(['powershell.exe', '(New-Object -ComObject shell.application).toggleDesktop()'])
+       subprocess.run(['powershell.exe', '(New-Object -ComObject shell.application).toggleDesktop()']) # First go directly to desktop
        time.sleep(0.1)
+      # Find windows and hide them
        def callback(hwnd, _):
            if win32gui.IsWindowVisible(hwnd) and win32gui.GetWindowText(hwnd):
                win32gui.ShowWindow(hwnd, win32con.SW_HIDE)
