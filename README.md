@@ -102,8 +102,10 @@ Exec: \\10.0.2.4\qemu\.venv\Scripts\python.exe
 
 If you got here congrats :)
 
-If you didn't you might have to set ``` Set-ExecutionPolicy RemoteSigned``` 
-You also have to launch this PowerShell admin. Yes the good things behind a single toggle or several... And a few downloads. 
+If you didn't you need to run a PowerShell in admin then:
+
+```Set-ExecutionPolicy RemoteSigned``` 
+Yes the good things behind a single toggle or several... And a few downloads. 
 
 ![image](https://github.com/user-attachments/assets/68dd3dfc-7f01-4f79-98e9-a34f3e26cc36)
 
