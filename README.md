@@ -122,9 +122,12 @@ Make sure to change boot order to not install twice once you're in.
 
 Create a desktop shortcut to your shared folder is practical! You can also directly open it in VSCode. 
 
+Scripts
+---
 
 
-
+I've included some bonuses in the repo:
+1. CTRL + H to go to desktop and hide current active windows
 
 
 
