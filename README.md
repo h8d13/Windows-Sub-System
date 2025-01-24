@@ -130,7 +130,7 @@ Scripts
 
 
 I've included some bonuses in the repo:
-1. CTRL + H to go to desktop and hide current active windows
+1. CTRL + H to go to desktop and hide current active windows (Inspired by HideFromMyBoss with some optimization)
 
 This can be done by default using SUPER key + D (but it doesn't actually hide your windows) 
 
