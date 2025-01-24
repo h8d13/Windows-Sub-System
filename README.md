@@ -112,7 +112,7 @@ Yes the good things behind a single toggle or several... And a few downloads.
 
 ![image](https://github.com/user-attachments/assets/68dd3dfc-7f01-4f79-98e9-a34f3e26cc36)
 
-I don't know how safe any of this is in practice but since this is a VM set-up with a pirated iso... Well you get the idea. 
+I don't know how safe any of this is in practice but since this is a VM set-up with a barebones iso... Well you get the idea. 
 
 Now if you want to learn about Powershell commands the easiest way is simply to run a CMD and enter ISE.
 This opens a graphical interface with every single command possible...
