@@ -16,7 +16,7 @@ Prereqs: Qemu, KVM, perms, windows ISO file
 
 4. Have fun! If you ever break something you can always re-install using the boot d (floppy).
 
-I tried getting WSL running and that wasnt a good idea.
+_I tried getting WSL running and that wasnt a good idea. WARNING: DO NOT TOUCH VIRTUALIZATION SETTINGS AS THAT WILL BREAK YOUR VM _
 
 CTRL ALT G to lock instance + CTRL ALT F for fullscreen
 
