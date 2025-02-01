@@ -166,3 +166,13 @@ Tool for better UI:
 https://www.startallback.com/
 
 
+# WSL On another machine
+
+Go to PowerShell in Admin > wsl --install Ubuntu --web-download
+
+Yuu can also use debian instead of ubuntu.
+
+Install https://vcxsrv.com/
+
+
+
