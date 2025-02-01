@@ -170,9 +170,23 @@ https://www.startallback.com/
 
 Go to PowerShell in Admin > wsl --install Ubuntu --web-download
 
-Yuu can also use debian instead of ubuntu.
+You can also use debian instead of ubuntu.
 
 Install https://vcxsrv.com/
 
+It will prompt you to reboot at some point. 
+
+Then run again: wsl --install Ubuntu
+
+THis time it will say something different: 
+```
+PS C:\WINDOWS\system32> wsl --install Ubuntu
+Ubuntu is already installed.
+Launching Ubuntu...
+Installing, this may take a few minutes...
+Please create a default UNIX user account. The username does not need to match your Windows username.
+For more information visit: https://aka.ms/wslusers
+Enter new UNIX username:
+```
 
 
