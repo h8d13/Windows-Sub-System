@@ -189,4 +189,6 @@ For more information visit: https://aka.ms/wslusers
 Enter new UNIX username:
 ```
 
+Set a username and password.
 
+Do the regular update, upgrade.
