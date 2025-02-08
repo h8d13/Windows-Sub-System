@@ -192,3 +192,5 @@ Enter new UNIX username:
 Set a username and password.
 
 Do the regular update, upgrade.
+
+## Try Wubuntu !
