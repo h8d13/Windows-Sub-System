@@ -165,7 +165,6 @@ Tool for better UI:
 
 https://www.startallback.com/
 
-
 # WSL On another machine
 
 Go to PowerShell in Admin > wsl --install Ubuntu --web-download
@@ -193,4 +192,3 @@ Set a username and password.
 
 Do the regular update, upgrade.
 
-## Try Wubuntu !
